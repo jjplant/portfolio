@@ -101,7 +101,7 @@ function App() {
               
               <p className="project-description">
                 Production-grade dialogue system with JWT-secured backend, modular architecture 
-                (6 managers, 8 renderers), and 99%+ uptime for 6+ months. Features CI/CD automation 
+                (6 managers, 8 renderers). Features CI/CD automation 
                 and performance optimizations that reduced load times by 70%.
               </p>
               
@@ -147,9 +147,8 @@ function App() {
               </div>
               
               <p className="project-description">
-                Multi-provider AI orchestration with 10 APIs, circuit breakers, and intelligent 
-                failover achieving 99%+ uptime. Serverless architecture on Vercel scales globally 
-                with &lt;500ms response times.
+                Multi-provider AI orchestration with 4 APIs, circuit breakers, and intelligent 
+                failover achieving 99%+ uptime. Serverless architecture on Vercel scales globally.                
               </p>
               
               <div className="project-metrics">
@@ -214,6 +213,7 @@ function App() {
                 <span className="tech-item">Python</span>
                 <span className="tech-item">Express</span>
                 <span className="tech-item">PostgreSQL</span>
+                <span className="tech-item">OracleL</span>
                 <span className="tech-item">JWT Auth</span>
               </div>
             </div>
@@ -224,7 +224,7 @@ function App() {
                 <span className="tech-item">Docker</span>
                 <span className="tech-item">Kubernetes</span>
                 <span className="tech-item">GitHub Actions</span>
-                <span className="tech-item">Terraform</span>
+                <span className="tech-item">DataDog</span>
                 <span className="tech-item">Ansible</span>
               </div>
             </div>
@@ -234,9 +234,10 @@ function App() {
               <div className="tech-list">
                 <span className="tech-item">AWS</span>
                 <span className="tech-item">Vercel</span>
+                <span className="tech-item">Render</span>
                 <span className="tech-item">Cloudflare</span>
                 <span className="tech-item">OpenAI APIs</span>
-                <span className="tech-item">LangChain</span>
+                <span className="tech-item">Cohere</span>
               </div>
             </div>
           </div>
