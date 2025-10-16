@@ -1,8 +1,8 @@
 {
   "name": "jay-javier-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "homepage": "https://yourusername.github.io/portfolio",
+  "homepage": "https://jjplant.place",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
