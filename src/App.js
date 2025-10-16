@@ -133,7 +133,7 @@ function App() {
                 <a href="https://panelscript.jjplant.place" className="project-link" target="_blank" rel="noopener noreferrer">
                   <FaExternalLinkAlt /> Live Demo
                 </a>
-                <a href="https://vn-api.jjplant.place" className="project-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://panelscript-api.jjplant.place/about" className="project-link" target="_blank" rel="noopener noreferrer">
                   <FaExternalLinkAlt /> API
                 </a>
               </div>
