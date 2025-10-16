@@ -4,6 +4,8 @@ import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [lightboxImage, setLightboxImage] = useState(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +29,43 @@ function App() {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openLightbox = (image) => {
+    setLightboxImage(image);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    setIsLightboxOpen(false);
+  };
+
+  const projectImages = {
+    PanelScript: [
+      'screenshots/pse-1_result.png',
+      'screenshots/pse-2_result.png',
+      'screenshots/pse-3_result.png',
+      'screenshots/pse-7_result.png'
+    ],
+    MiraLux: [
+      'screenshots/ml1.jpeg',
+      'screenshots/ml2.jpeg',
+      'screenshots/ml3.jpeg',
+      'screenshots/ml5.jpeg'
+    ]
+  };
+
   return (
     <div className="App">
+      {/* Lightbox */}
+      {isLightboxOpen && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxImage} alt="Enlarged project screenshot" className="lightbox-image" />
+            <button className="lightbox-close" onClick={closeLightbox}>×</button>
+          </div>
+        </div>
+      )}
+
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
@@ -89,7 +126,7 @@ function App() {
       <section id="projects" className="projects">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">Production systems demonstrating full-stack capabilities and DevOps excellence</p>
+          <p className="section-subtitle">Systems showcasing full-stack development and DevOps practices</p>
           
           <div className="project-grid">
             {/* PanelScript Card */}
@@ -104,6 +141,15 @@ function App() {
                 (6 managers, 8 renderers). Features CI/CD automation 
                 and performance optimizations that reduced load times by 70%.
               </p>
+              
+              {/* Image Gallery */}
+              <div className="project-gallery">
+                {projectImages.PanelScript.map((image, index) => (
+                  <div key={index} className="gallery-tile" onClick={() => openLightbox(image)}>
+                    <img src={image} alt={`PanelScript screenshot ${index + 1}`} />
+                  </div>
+                ))}
+              </div>
               
               <div className="project-metrics">
                 <div className="metric">
@@ -151,10 +197,19 @@ function App() {
                 failover achieving 99%+ uptime. Serverless architecture on Vercel scales globally.                
               </p>
               
+              {/* Image Gallery */}
+              <div className="project-gallery">
+                {projectImages.MiraLux.map((image, index) => (
+                  <div key={index} className="gallery-tile" onClick={() => openLightbox(image)}>
+                    <img src={image} alt={`MiraLux screenshot ${index + 1}`} />
+                  </div>
+                ))}
+              </div>
+              
               <div className="project-metrics">
                 <div className="metric">
                   <FaCloud className="metric-icon" />
-                  <span>10 AI providers</span>
+                  <span>4 AI providers</span>
                 </div>
                 <div className="metric">
                   <FaServer className="metric-icon" />
@@ -171,6 +226,8 @@ function App() {
                 <span className="tech-tag">Node.js</span>
                 <span className="tech-tag">Vercel</span>
                 <span className="tech-tag">OpenAI</span>
+                <span className="tech-tag">Gemini</span>
+                <span className="tech-tag">Cohere</span>
                 <span className="tech-tag">Anthropic</span>
                 <span className="tech-tag">Circuit Breakers</span>
               </div>
