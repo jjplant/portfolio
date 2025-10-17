@@ -112,9 +112,7 @@ function App() {
             <span className="highlight">Senior Engineer</span>
           </h1>
           <p className="hero-subtitle">
-            12 years building resilient systems that scale. Currently crafting
-            production infrastructure with 99%+ uptime while exploring the
-            intersection of creativity and technology.
+            12 years building resilient systems that scale. Shipped production infrastructure with 99%+ uptime while exploring the intersection of creativity and technology.
           </p>
           <div className="hero-stats">
             <div className="stat">
