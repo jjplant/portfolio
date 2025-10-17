@@ -409,14 +409,14 @@ function App() {
             </a>
           </div>
 
-          <div className="contact-cta">
-            <p>
-              Currently seeking: <strong>Senior DevOps Engineer</strong> •{" "}
-              <strong>Product Engineer</strong> •{" "}
-              <strong>Creative Technologist</strong>
-            </p>
-            <p className="location">Calgary, AB • Remote-First</p>
-          </div>
+        <div className="contact-cta">
+          <p>
+            Open to roles in <strong>Creative Technology</strong>, <strong>Systems Architecture</strong>, and <strong>Product Engineering</strong>—
+            with a focus on expressive infrastructure and hybrid authorship.
+          </p>
+          <p className="location">Calgary, AB • Remote-First • Agency-Ready</p>
+        </div>
+
         </div>
       </section>
 
